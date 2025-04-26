@@ -1,0 +1,15 @@
+# 1: Deleting data from this code
+import shutil
+
+# Path where Hugging Face datasets are cached
+hf_cache_dir = '/root/.cache/huggingface/datasets/'
+
+# Delete the entire cache directory to remove downloaded datasets
+shutil.rmtree(hf_cache_dir)
+
+print("All files downloaded via Hugging Face datasets have been deleted.")
+
+# 2: Deleting all cashe
+!rm -rf /content/* /root/* /root/.cache/* /tmp/*
+import os
+os.kill(os.getpid(), 9)
